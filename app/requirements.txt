@@ -1,2 +1,5 @@
 Flask==3.00
 gunicorn
+pytest
+
+
