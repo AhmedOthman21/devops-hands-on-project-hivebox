@@ -1,0 +1,5 @@
+[flake8]
+ignore = E501,E741,F821
+
+
+exclude = .git, __pycache__, venv, .pytest_cache, .dockerignore, .pre-commit-config.yaml, tests
