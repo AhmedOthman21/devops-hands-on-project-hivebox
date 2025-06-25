@@ -1,0 +1,14 @@
+.git
+.gitignore
+.env
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.pytest_cache
+.vscode
+.pycharm
+venv/
+node_modules/
+.DS_Store
+npo-debug.log

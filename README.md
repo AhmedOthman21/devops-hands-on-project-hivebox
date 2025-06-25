@@ -53,3 +53,38 @@ Here is a pre-start checklist:
 ## Implementation
 
 ** ADD YOUR IMPLEMENTATION DOCUMENTATION HERE **
+
+## Implementation
+
+### Phase 1: Initial Application Setup & Containerization
+
+**Objective:** To create the foundational HiveBox API service and containerize it using Docker.
+
+**Application Details:**
+* **Technology:** Python 3.9, Flask web framework.
+* **Endpoints Implemented:**
+    * `/`: Welcome message.
+    * `/version`: Returns the application version (e.g., `{"version": "0.1.0"}`).
+    * `/healthz`: Basic health check (e.g., `{"status": "healthy", "message": "API is running"}`).
+    * `/metrics`: Placeholder for future Prometheus metrics.
+
+**Directory Structure:**
+.
+├── app/
+│   ├── app.py
+│   └── requirements.txt
+├── Dockerfile
+├── .dockerignore
+└── README.md
+
+
+**Dockerfile Explanation:**
+The `Dockerfile` is located in the root of the repository and is responsible for building the Docker image for the HiveBox API.
+* It uses `python:3.9-slim-buster` as the base image for a lean environment.
+* Sets `/app` as the working directory inside the container.
+* Copies `requirements.txt` and installs dependencies using `pip`.
+* Copies the `app/` directory content into the container's `/app` directory.
+* Exposes port `5000`.
+* Sets `FLASK_APP` and `FLASK_ENV` environment variables.
+* Defines the `CMD` to run the Flask application using `gunicorn`.
+
